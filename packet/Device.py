@@ -38,7 +38,10 @@ class Device:
         self.network_ports = data.get("network_ports")
         self.href = data.get("href")
         self.spot_instance = data.get("spot_instance", False)
+        self.spot_price_max = data.get("spot_price_max")
+        self.termination_time = data.get("termination_time")
         self.root_password = data.get("root_password")
+        self.provisioning_percentage = data.get("provisioning_percentage")
 
     def update(self):
         params = {
